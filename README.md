@@ -1,8 +1,14 @@
 # it-novum Webinar 24. November 2022.  (Work in progress ...)
 
-## Demo Daten und Skripte vom IT Novum Seminar - Graph-Datenbanken: So decken Sie neue Zusammenhänge auf
+### Demo Daten und Skripte vom IT Novum Seminar - Graph-Datenbanken: So decken Sie neue Zusammenhänge auf
 
-## Verzeichnisse:
+In diesem Teil des Webinars haben wir aufgezeigt, wie man Neo4j Workspace nutzt, um eine Graphdatenbank aufzubauen. Workspace erlaubt ein schnelle Prototyping indem es Daten importiert, mit denen dann ein Datenmodell erstellt wird und wie anschliessend die Daten importieren und analysiert werden.
+
+Als Beispiel-Daten nutzen wir Daten von der öffentlichen Seite **govdata.de**. Wir importieren zwei Dateien, welche informationen über öffentliche Ladesäulen in Schleswig-Holstein enthalten und eine Datei mit Informationen von Windrädern im selben Bundesland. Durch das Zusammenführen der unterschiedlichen Datensets können wir dann analysieren, wie die einzelnen Kommunen aufgestellt sind.
+
+Dies stellt nur ein einfaches Beispiel dar, aber das Datenmodell kann man auf weitere Verbraucher und Erzeuger ein Kommunde ausweiten, um genauere Analysen und Voraussagen treffen zu können. Es dient als Beispiel und Anregung, welchen Mehrwert eine Graphdatenbank und deren Anaylsen erlauben.
+
+### Verzeichnisse:
 
 #### Daten: Enthält die aufbereiteten Daten von Govdata.de
 
