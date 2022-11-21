@@ -12,7 +12,7 @@ Dies stellt nur ein einfaches Beispiel dar, aber das Datenmodell kann man auf we
 
 #### Daten: Enthält die aufbereiteten Daten von Govdata.de
 
-#### Quelle der Daten:
+#### Daten:
 - Webseite: [Govdata.de](https://www.govdata.de/) 
 - [Windkraftanlagen Schleswig-Holstein Stand 18.08.2022](https://opendata.schleswig-holstein.de/dataset/12fb2027-d2d3-42c9-8774-34a70f584c0f/resource/e47cf6aa-d4eb-4c61-9605-bba859684c13/download/opendata_wka_ib_gv_vb_sh_20220701.csv)
 - [Ladesäulen Schleswig-Holstein Stand 1.10.2022](https://opendata.schleswig-holstein.de/dataset/ac7347a6-8011-46b2-97ed-b4816807ef47/resource/a90e6d90-ae46-4b91-997c-c29c9a7b1e71/download/ladesaeulenregister.csv)
@@ -153,15 +153,11 @@ WITH sum(e.Leistung) AS kwErzeug, ort, kwVerbrauch
 RETURN ort AS Ort, kwErzeug AS `Erzeuger-Gesamt`, kwVerbrauch AS `Verbraucher-Gesamt`;
 ```
 
-  
+Dies sind nur ein paar mögliche Queries, aber es gibt noch viel mehr mit denen die Daten ausgewertet werden können.
 
+Mit dem "**Explore**"-Tab in Workspace besteht eine Möglichkeit, die Daten grafisch geführt zu analysieren. Über das Suchfeld werden mittels Suchwörtern Daten gesucht und analysiert. Weitere Funktionalität wie "**Search Phrases**"  oder "**Scene Actions**" können dann helfen, Workflows aufzubauen und auch Änderungen der Daten zu ermöglichen. Für einen tieferen Einblick in [Neo4j Bloom](https://neo4j.com/product/bloom/) (welches sich hinter dem Explore-Tab verbirgt), empfehlen wir die Informationen auf unsere Webseite oder einige der [Bloom Tutorials](https://www.youtube.com/watch?v=Tv0O2OGwyDM) auf Youtube.
 
+Hier noch ein Screenshot, wie die Analyse mit Neo4j Bloom im Explore-Tab aussehen kann. Viel Spaß beim Analysieren!
 
-
-
-
-
-
-
-
+<img width="1040" alt="Bildschirmfoto 2022-11-21 um 15 42 25" src="https://user-images.githubusercontent.com/8035021/203083466-83a7c5b9-2777-4bcc-81bc-9e101c65ef55.png">
 
