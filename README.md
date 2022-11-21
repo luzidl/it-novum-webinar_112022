@@ -1,7 +1,7 @@
 # it-novum Webinar 24. November 2022.  (Work in progress ...)
 
-Demo Daten und Skripte vom IT Novum Seminar - Graph-Datenbanken: So decken Sie neue Zusammenhänge auf
----
+## Demo Daten und Skripte vom IT Novum Seminar - Graph-Datenbanken: So decken Sie neue Zusammenhänge auf
+
 ## Verzeichnisse:
 
 #### Daten: Enthält die aufbereiteten Daten von Govdata.de
