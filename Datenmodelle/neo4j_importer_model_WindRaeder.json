@@ -1,0 +1,326 @@
+{
+  "version": "0.6.2",
+  "graph": {
+    "nodes": [
+      {
+        "id": "n0",
+        "position": {
+          "x": -251,
+          "y": -138
+        },
+        "caption": "Ort"
+      },
+      {
+        "id": "n1",
+        "position": {
+          "x": -251,
+          "y": 136
+        },
+        "caption": "Kreis"
+      },
+      {
+        "id": "n5",
+        "position": {
+          "x": -251,
+          "y": -459
+        },
+        "caption": "Erzeuger"
+      }
+    ],
+    "relationships": [
+      {
+        "id": "n0",
+        "type": "LIEGT_IN_KREIS",
+        "fromId": "n0",
+        "toId": "n1"
+      },
+      {
+        "id": "n6",
+        "type": "HAT_ERZEUGER",
+        "fromId": "n0",
+        "toId": "n5"
+      }
+    ]
+  },
+  "dataModel": {
+    "fileModel": {
+      "fileSchemas": {
+        "Windraeder_SH_lc.csv": {
+          "expanded": true,
+          "fields": [
+            {
+              "name": "Kreis",
+              "type": "string",
+              "sample": "Kiel",
+              "include": true
+            },
+            {
+              "name": "Ort",
+              "type": "string",
+              "sample": "Kiel",
+              "include": true
+            },
+            {
+              "name": "Typ",
+              "type": "string",
+              "sample": "Nordex N131 - 3,0 MW",
+              "include": true
+            },
+            {
+              "name": "Hersteller",
+              "type": "string",
+              "sample": "Nordex",
+              "include": true
+            },
+            {
+              "name": "Nabenhoehe",
+              "type": "string",
+              "sample": "134",
+              "include": true
+            },
+            {
+              "name": "Rotordurchmesser",
+              "type": "integer",
+              "sample": "131",
+              "include": true
+            },
+            {
+              "name": "Schallleistungspegel",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "Leistung",
+              "type": "integer",
+              "sample": "3000",
+              "include": true
+            },
+            {
+              "name": "Leistungsbezug",
+              "type": "string",
+              "sample": "kW Nennleist. Rotor.",
+              "include": true
+            },
+            {
+              "name": "Ostwert",
+              "type": "integer",
+              "sample": "32571605",
+              "include": true
+            },
+            {
+              "name": "Nordwert",
+              "type": "integer",
+              "sample": "6013660",
+              "include": true
+            },
+            {
+              "name": "Genehmigt_am",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "Iinbetriebnahme",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "Status",
+              "type": "string",
+              "sample": "im Gen.Verf.",
+              "include": true
+            },
+            {
+              "name": "Bst_Nr",
+              "type": "integer",
+              "sample": "02000000317",
+              "include": true
+            },
+            {
+              "name": "Anl_Nr",
+              "type": "integer",
+              "sample": "0001",
+              "include": true
+            },
+            {
+              "name": "Datendatum",
+              "type": "string",
+              "sample": "06.07.2022",
+              "include": true
+            },
+            {
+              "name": "Datenquelle",
+              "type": "string",
+              "sample": "LLUR SH, Abtl. 7",
+              "include": true
+            }
+          ]
+        }
+      }
+    },
+    "graphModel": {
+      "nodeSchemas": {
+        "n0": {
+          "label": "Ort",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "Ort",
+              "type": "string",
+              "identifier": "2IGQEBJca3kSFP700-qAi"
+            }
+          ],
+          "key": {
+            "properties": [
+              "2IGQEBJca3kSFP700-qAi"
+            ],
+            "name": ""
+          }
+        },
+        "n1": {
+          "label": "Kreis",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "Kreis",
+              "type": "string",
+              "identifier": "4IRuHbJdF5t-YzTGtMFs0"
+            }
+          ],
+          "key": {
+            "properties": [
+              "4IRuHbJdF5t-YzTGtMFs0"
+            ],
+            "name": ""
+          }
+        },
+        "n5": {
+          "label": "Erzeuger",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "Typ",
+              "type": "string",
+              "identifier": "XC2EIhej-p1AP68P5kbh5"
+            },
+            {
+              "property": "Hersteller",
+              "type": "string",
+              "identifier": "0Vqm0pyF1U5ajWSLlNWME"
+            },
+            {
+              "property": "Leistung",
+              "type": "integer",
+              "identifier": "TQ801CPkr0V0O1p53hsfz"
+            },
+            {
+              "property": "Anl_Nr",
+              "type": "integer",
+              "identifier": "Vscr51lJL6gX_a2lV2r6e"
+            }
+          ],
+          "key": {
+            "properties": [
+              "Vscr51lJL6gX_a2lV2r6e"
+            ],
+            "name": ""
+          }
+        }
+      },
+      "relationshipSchemas": {
+        "n0": {
+          "type": "LIEGT_IN_KREIS",
+          "sourceNodeSchema": "n0",
+          "targetNodeSchema": "n1",
+          "properties": []
+        },
+        "n6": {
+          "type": "HAT_ERZEUGER",
+          "sourceNodeSchema": "n0",
+          "targetNodeSchema": "n5",
+          "properties": []
+        }
+      }
+    },
+    "mappingModel": {
+      "nodeMappings": {
+        "n0": {
+          "nodeSchema": "n0",
+          "fileSchema": "Windraeder_SH_lc.csv",
+          "mappings": [
+            {
+              "field": "Ort"
+            }
+          ]
+        },
+        "n1": {
+          "nodeSchema": "n1",
+          "fileSchema": "Windraeder_SH_lc.csv",
+          "mappings": [
+            {
+              "field": "Kreis"
+            }
+          ]
+        },
+        "n5": {
+          "nodeSchema": "n5",
+          "fileSchema": "Windraeder_SH_lc.csv",
+          "mappings": [
+            {
+              "field": "Typ"
+            },
+            {
+              "field": "Hersteller"
+            },
+            {
+              "field": "Leistung"
+            },
+            {
+              "field": "Anl_Nr"
+            }
+          ]
+        }
+      },
+      "relationshipMappings": {
+        "n0": {
+          "relationshipSchema": "n0",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "Ort"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "Kreis"
+            }
+          ],
+          "fileSchema": "Windraeder_SH_lc.csv"
+        },
+        "n6": {
+          "relationshipSchema": "n6",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "Ort"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "Anl_Nr"
+            }
+          ],
+          "fileSchema": "Windraeder_SH_lc.csv"
+        }
+      }
+    },
+    "configurations": {
+      "idsToIgnore": []
+    }
+  }
+}

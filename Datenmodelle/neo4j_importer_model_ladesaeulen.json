@@ -1,0 +1,640 @@
+{
+  "version": "0.6.3",
+  "graph": {
+    "nodes": [
+      {
+        "id": "n0",
+        "position": {
+          "x": -251,
+          "y": -138
+        },
+        "caption": "Ort"
+      },
+      {
+        "id": "n1",
+        "position": {
+          "x": -251,
+          "y": 136
+        },
+        "caption": "Kreis"
+      },
+      {
+        "id": "n3",
+        "position": {
+          "x": 70,
+          "y": -138
+        },
+        "caption": "Verbraucher"
+      },
+      {
+        "id": "n4",
+        "position": {
+          "x": 70,
+          "y": -459
+        },
+        "caption": "Betreiber"
+      }
+    ],
+    "relationships": [
+      {
+        "id": "n0",
+        "type": "LIEGT_IN_KREIS",
+        "fromId": "n0",
+        "toId": "n1"
+      },
+      {
+        "id": "n2",
+        "type": "HAT_VERBRAUCHER",
+        "fromId": "n0",
+        "toId": "n3"
+      },
+      {
+        "id": "n3",
+        "type": "BETRIEB_DURCH",
+        "fromId": "n3",
+        "toId": "n4"
+      },
+      {
+        "id": "n4",
+        "type": "ANSAESSIG_IN",
+        "fromId": "n4",
+        "toId": "n0"
+      },
+      {
+        "id": "n5",
+        "type": "LIEGT_IN",
+        "fromId": "n3",
+        "toId": "n0"
+      }
+    ]
+  },
+  "dataModel": {
+    "fileModel": {
+      "fileSchemas": {
+        "ladesaeulenregister_SH_Ids.csv": {
+          "expanded": true,
+          "fields": [
+            {
+              "name": "lsNr",
+              "type": "integer",
+              "sample": "1",
+              "include": true
+            },
+            {
+              "name": "Betreiber",
+              "type": "string",
+              "sample": "Stadtwerke Eutin GmbH",
+              "include": true
+            },
+            {
+              "name": "Straße",
+              "type": "string",
+              "sample": "Poststraße",
+              "include": true
+            },
+            {
+              "name": "Hausnummer",
+              "type": "string",
+              "sample": "0",
+              "include": true
+            },
+            {
+              "name": "Adresszusatz",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "Postleitzahl",
+              "type": "integer",
+              "sample": "23623",
+              "include": true
+            },
+            {
+              "name": "Ort",
+              "type": "string",
+              "sample": "Ahrensbök",
+              "include": true
+            },
+            {
+              "name": "Bundesland",
+              "type": "string",
+              "sample": "Schleswig-Holstein",
+              "include": true
+            },
+            {
+              "name": "Kreis/kreisfreie Stadt",
+              "type": "string",
+              "sample": "Kreis Ostholstein",
+              "include": true
+            },
+            {
+              "name": "Breitengrad",
+              "type": "float",
+              "sample": "54.012848",
+              "include": true
+            },
+            {
+              "name": "Längengrad",
+              "type": "float",
+              "sample": "10.572616",
+              "include": true
+            },
+            {
+              "name": "Inbetriebnahmedatum",
+              "type": "datetime",
+              "sample": "2019-05-17",
+              "include": true
+            },
+            {
+              "name": "Anschlussleistung",
+              "type": "float",
+              "sample": "44",
+              "include": true
+            },
+            {
+              "name": "Normalladeeinrichtung",
+              "type": "string",
+              "sample": "Normalladeeinrichtung",
+              "include": true
+            },
+            {
+              "name": "Anzahl Ladepunkte",
+              "type": "integer",
+              "sample": "2",
+              "include": true
+            },
+            {
+              "name": "Steckertypen1",
+              "type": "string",
+              "sample": "AC Steckdose Typ 2",
+              "include": true
+            },
+            {
+              "name": "P1 [kW]",
+              "type": "integer",
+              "sample": "22",
+              "include": true
+            },
+            {
+              "name": "Public Key1",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "Steckertypen2",
+              "type": "string",
+              "sample": "AC Steckdose Typ 2",
+              "include": true
+            },
+            {
+              "name": "P2 [kW]",
+              "type": "integer",
+              "sample": "22",
+              "include": true
+            },
+            {
+              "name": "Public Key2",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "Steckertypen3",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "P3 [kW]",
+              "type": "integer",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "Public Key3",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "Steckertypen4",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "P4 [kW]",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "Public Key4",
+              "type": "string",
+              "sample": "",
+              "include": true
+            }
+          ]
+        }
+      }
+    },
+    "graphModel": {
+      "nodeSchemas": {
+        "n0": {
+          "label": "Ort",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "Ort",
+              "type": "string",
+              "identifier": "iIiKCSTFSKgFjPT90Zetf"
+            },
+            {
+              "property": "Straße",
+              "type": "string",
+              "identifier": "IoMSnK0KRj_OKT0-WMoQL"
+            },
+            {
+              "property": "Hausnummer",
+              "type": "string",
+              "identifier": "I8LbQ8EXg8xHL8nDWC2q2"
+            },
+            {
+              "property": "Adresszusatz",
+              "type": "string",
+              "identifier": "7p0Yu17GtmS9no61fIs_l"
+            },
+            {
+              "property": "Postleitzahl",
+              "type": "integer",
+              "identifier": "dbZ76sRtO0gO7iTgHGNGI"
+            }
+          ],
+          "key": {
+            "properties": [
+              "iIiKCSTFSKgFjPT90Zetf"
+            ],
+            "name": ""
+          }
+        },
+        "n1": {
+          "label": "Kreis",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "Kreis",
+              "type": "string",
+              "identifier": "OrdBoEUatkj-MxUR0Ic-O"
+            },
+            {
+              "property": "Bundesland",
+              "type": "string",
+              "identifier": "85915_ule8J_nObS5dYMr"
+            }
+          ],
+          "key": {
+            "properties": [
+              "OrdBoEUatkj-MxUR0Ic-O"
+            ],
+            "name": ""
+          }
+        },
+        "n3": {
+          "label": "Verbraucher",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "lsNr",
+              "type": "integer",
+              "identifier": "mL7iHGONVetgndKQyjvrm"
+            },
+            {
+              "property": "Straße",
+              "type": "string",
+              "identifier": "r7Pz26RPKdLonBr1zF4Kx"
+            },
+            {
+              "property": "Hausnummer",
+              "type": "string",
+              "identifier": "xz_5F_9zb-QoJAW_YGerd"
+            },
+            {
+              "property": "Postleitzahl",
+              "type": "integer",
+              "identifier": "M1zeWDBevO_rg1WOxsfBH"
+            },
+            {
+              "property": "Ort",
+              "type": "string",
+              "identifier": "BAqLI_-JA74lcJXfE6EV_"
+            },
+            {
+              "property": "Breitengrad",
+              "type": "float",
+              "identifier": "avOmEnATtjN-Tl9sMlHNJ"
+            },
+            {
+              "property": "Längengrad",
+              "type": "float",
+              "identifier": "1ft22DGwp7oOjUoX-42qq"
+            },
+            {
+              "property": "Anschlussleistung",
+              "type": "float",
+              "identifier": "KIBlONFRtzbyCEzP0VZuH"
+            },
+            {
+              "property": "AnzahlLadepunkte",
+              "type": "integer",
+              "identifier": "2Q_eWavEMp1x5lNh4fjzs"
+            },
+            {
+              "property": "Steckertypen1",
+              "type": "string",
+              "identifier": "s8tnoltK3kJYyZ0rR8oDB"
+            },
+            {
+              "property": "P1_kW",
+              "type": "integer",
+              "identifier": "QvgbnRRbO60UZISIOsJly"
+            },
+            {
+              "property": "Steckertypen2",
+              "type": "string",
+              "identifier": "lFPmX9PCMxYeuNEt7dTP1"
+            },
+            {
+              "property": "P2_kW",
+              "type": "integer",
+              "identifier": "r4L2pmmUP5PJDA6FxOPdJ"
+            },
+            {
+              "property": "Steckertypen3",
+              "type": "string",
+              "identifier": "I9x4fsFqAUl3ujUIkHVaY"
+            },
+            {
+              "property": "P3_kW",
+              "type": "integer",
+              "identifier": "FHk4MoFQFFqlOZa4BrsnR"
+            },
+            {
+              "property": "Steckertypen4",
+              "type": "string",
+              "identifier": "SbPpEoSp6g5ibwH84lCMl"
+            },
+            {
+              "property": "P4_kW",
+              "type": "string",
+              "identifier": "f1G8GjR-fo1bCaLaruYOH"
+            }
+          ],
+          "key": {
+            "properties": [
+              "mL7iHGONVetgndKQyjvrm"
+            ],
+            "name": ""
+          }
+        },
+        "n4": {
+          "label": "Betreiber",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "Betreiber",
+              "type": "string",
+              "identifier": "ZA48vw9vqxTNTJfwBBnDe"
+            }
+          ],
+          "key": {
+            "properties": [
+              "ZA48vw9vqxTNTJfwBBnDe"
+            ],
+            "name": ""
+          }
+        }
+      },
+      "relationshipSchemas": {
+        "n0": {
+          "type": "LIEGT_IN_KREIS",
+          "sourceNodeSchema": "n0",
+          "targetNodeSchema": "n1",
+          "properties": []
+        },
+        "n2": {
+          "type": "HAT_VERBRAUCHER",
+          "sourceNodeSchema": "n0",
+          "targetNodeSchema": "n3",
+          "properties": []
+        },
+        "n3": {
+          "type": "BETRIEB_DURCH",
+          "sourceNodeSchema": "n3",
+          "targetNodeSchema": "n4",
+          "properties": []
+        },
+        "n4": {
+          "type": "ANSAESSIG_IN",
+          "sourceNodeSchema": "n4",
+          "targetNodeSchema": "n0",
+          "properties": []
+        },
+        "n5": {
+          "type": "LIEGT_IN",
+          "sourceNodeSchema": "n3",
+          "targetNodeSchema": "n0",
+          "properties": []
+        }
+      }
+    },
+    "mappingModel": {
+      "nodeMappings": {
+        "n0": {
+          "nodeSchema": "n0",
+          "fileSchema": "ladesaeulenregister_SH_Ids.csv",
+          "mappings": [
+            {
+              "field": "Ort"
+            },
+            {
+              "field": "Straße"
+            },
+            {
+              "field": "Hausnummer"
+            },
+            {
+              "field": "Adresszusatz"
+            },
+            {
+              "field": "Postleitzahl"
+            }
+          ]
+        },
+        "n1": {
+          "nodeSchema": "n1",
+          "fileSchema": "ladesaeulenregister_SH_Ids.csv",
+          "mappings": [
+            {
+              "field": "Kreis/kreisfreie Stadt"
+            },
+            {
+              "field": "Bundesland"
+            }
+          ]
+        },
+        "n3": {
+          "nodeSchema": "n3",
+          "fileSchema": "ladesaeulenregister_SH_Ids.csv",
+          "mappings": [
+            {
+              "field": "lsNr"
+            },
+            {
+              "field": "Straße"
+            },
+            {
+              "field": "Hausnummer"
+            },
+            {
+              "field": "Postleitzahl"
+            },
+            {
+              "field": "Ort"
+            },
+            {
+              "field": "Breitengrad"
+            },
+            {
+              "field": "Längengrad"
+            },
+            {
+              "field": "Anschlussleistung"
+            },
+            {
+              "field": "Anzahl Ladepunkte"
+            },
+            {
+              "field": "Steckertypen1"
+            },
+            {
+              "field": "P1 [kW]"
+            },
+            {
+              "field": "Steckertypen2"
+            },
+            {
+              "field": "P2 [kW]"
+            },
+            {
+              "field": "Steckertypen3"
+            },
+            {
+              "field": "P3 [kW]"
+            },
+            {
+              "field": "Steckertypen4"
+            },
+            {
+              "field": "P4 [kW]"
+            }
+          ]
+        },
+        "n4": {
+          "nodeSchema": "n4",
+          "fileSchema": "ladesaeulenregister_SH_Ids.csv",
+          "mappings": [
+            {
+              "field": "Betreiber"
+            }
+          ]
+        }
+      },
+      "relationshipMappings": {
+        "n0": {
+          "relationshipSchema": "n0",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "Ort"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "Kreis/kreisfreie Stadt"
+            }
+          ],
+          "fileSchema": "ladesaeulenregister_SH_Ids.csv"
+        },
+        "n2": {
+          "relationshipSchema": "n2",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "Ort"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "lsNr"
+            }
+          ],
+          "fileSchema": "ladesaeulenregister_SH_Ids.csv"
+        },
+        "n3": {
+          "relationshipSchema": "n3",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "lsNr"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "Betreiber"
+            }
+          ],
+          "fileSchema": "ladesaeulenregister_SH_Ids.csv"
+        },
+        "n4": {
+          "relationshipSchema": "n4",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "Betreiber"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "Ort"
+            }
+          ],
+          "fileSchema": "ladesaeulenregister_SH_Ids.csv"
+        },
+        "n5": {
+          "relationshipSchema": "n5",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "lsNr"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "Ort"
+            }
+          ],
+          "fileSchema": "ladesaeulenregister_SH_Ids.csv"
+        }
+      }
+    },
+    "configurations": {
+      "idsToIgnore": []
+    }
+  }
+}
