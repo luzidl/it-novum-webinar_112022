@@ -96,8 +96,50 @@ Noch eines vorweg, die Datenmodelle bauen aufeinander auf. Als gemeinsamer Knote
 
 Wir wechseln nun in den Reiter "**Query**" und testen dort ein paar Abragen in der Query Sprache "Cypher", welche Neo4j entwickelt hat. Die Sprache Cypher wird aktuell in einem ISO Gremium standartisiert und wird dann zukünftig als Graph Query Language ([GQL](https://www.gqlstandards.org/)) verfügbar sein. In der [Neo4j Graph Academy](https://graphacademy.neo4j.com/) gibt es diverse frei verfügbare Online-Kurse, wo man Cypher lernen kann.
 
+Als Erstes schauen wir uns mal an, welcher Ort wieviel Gesamt-Verbrauch hat und wieviele Ladesäulen das sind. Hier ist die Cypher Query dazu:
+
+```cypher
+MATCH (o:Ort)-[:HAT_VERBRAUCHER]->(v:Verbraucher)
+RETURN DISTINCT o.Ort AS Ortsname, sum(v.Anschlussleistung) AS `Verbrauch-Gesamt`, sum(v.AnzahlLadepunkte) AS `Anzahl Ladepunkte`;
+```
+
+Diese kopieren wir in die obere Kommandozeile des Neo4j Browsers (Reiter Query in Workspace), was dann wie folgt aussieht:
+
+<img width="1024" alt="Bildschirmfoto 2022-11-21 um 12 53 35" src="https://user-images.githubusercontent.com/8035021/203046732-52a04a9b-f07e-455a-85e3-912e6cfe7638.png">
+
+Wenn man die Query dann laufen lässt (Klick auf den kleinen blauen Button rechts in der Query Zeile), dann bekommt man sofort das Ergebnis angezeigt:
+
+<img width="2047" alt="Bildschirmfoto 2022-11-21 um 12 53 51" src="https://user-images.githubusercontent.com/8035021/203047100-6b385b52-3b9a-44db-a14a-04e5886396b3.png">
+
+Analog kann man dann mit den folgenden Queries verfahren.
 
 
+Diese Query zeigt nun statt der Verbraucher alle Erzeuger und deren gesamt Produktion an Energie an:
+```cypher
+MATCH (o:Ort)-[:HAT_ERZEUGER]->(e:Erzeuger)
+RETURN DISTINCT o.Ort AS Ortsname, sum(e.Leistung) AS `Erzeugung-Gesamt`ORDER BY `Erzeugung-Gesamt` DESC;
+```
+
+Diese Query vergleicht, wieviel Energie in einem Ort (hier Kiel) verbraucht wird und stellt das der gesamten Erzeugung von Energie gegenüber:
+```cypher
+MATCH (v:Verbraucher)<-[:HAT_VERBRAUCHER]-(o1:Ort {Ort: 'Kiel'})
+WITH sum(v.Anschlussleistung) AS usedKW
+MATCH (o2:Ort {Ort: 'Kiel'})-[:HAT_ERZEUGER]->(e:Erzeuger)
+RETURN o2.Ort AS Ort, usedKW AS `Verbraucher-Gesamt`, sum(e.Leistung) AS `Erzeuger-Gesamt`;
+```
+
+Diese Query macht das gleiche, nur für alle Ortschaften in unserer Graph-Datenbank:
+  ```cypher
+MATCH (v:Verbraucher)<-[:HAT_VERBRAUCHER]-(o:Ort)
+WITH toInteger(sum(v.Anschlussleistung)) AS kwVerbrauch, o.Ort AS orte
+UNWIND orte AS ort
+MATCH (o:Ort)-[:HAT_ERZEUGER]->(e:Erzeuger)
+WHERE o.Ort = ort
+WITH sum(e.Leistung) AS kwErzeug, ort, kwVerbrauch
+RETURN ort AS Ort, kwErzeug AS `Erzeuger-Gesamt`, kwVerbrauch AS `Verbraucher-Gesamt`;
+```
+
+  
 
 
 
