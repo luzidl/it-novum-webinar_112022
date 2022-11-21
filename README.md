@@ -8,9 +8,8 @@ Demo Daten und Skripte vom IT Novum Seminar - Graph-Datenbanken: So decken Sie n
 
 - **Quelle der Daten**
 	- [Govdata.de](https://www.govdata.de/) 
-		- [Windkraftanlagen Schleswig-Holstein Stand 18.08.2022]([https://opendata.schleswig-holstein.de/dataset/12fb2027-d2d3-42c9-8774-34a70f584c0f/resource/e47cf6aa-d4eb-4c61-9605-bba859684c13/download/opendata_wka_ib_gv_vb_sh_20220701.csv](https://opendata.schleswig-holstein.de/dataset/12fb2027-d2d3-42c9-8774-34a70f584c0f/resource/e47cf6aa-d4eb-4c61-9605-bba859684c13/download/opendata_wka_ib_gv_vb_sh_20220701.csv))
-		- [Ladesäulen Schleswig-Holstein Stand 1.10.2022]([https://opendata.schleswig-holstein.de/dataset/ac7347a6-8011-46b2-97ed-b4816807ef47/resource/a90e6d90-ae46-4b91-997c-c29c9a7b1e71/download/ladesaeulenregister.csv](https://opendata.schleswig-holstein.de/dataset/ac7347a6-8011-46b2-97ed-b4816807ef47/resource/a90e6d90-ae46-4b91-997c-c29c9a7b1e71/download/ladesaeulenregister.csv))
-			- [Liste der Ladesäulen](https://www.govdata.de/web/guest/daten/-/details/liste-der-ladesaulenddc56)
+		- [Windkraftanlagen Schleswig-Holstein Stand 18.08.2022](https://opendata.schleswig-holstein.de/dataset/12fb2027-d2d3-42c9-8774-34a70f584c0f/resource/e47cf6aa-d4eb-4c61-9605-bba859684c13/download/opendata_wka_ib_gv_vb_sh_20220701.csv)
+		- [Ladesäulen Schleswig-Holstein Stand 1.10.2022](https://opendata.schleswig-holstein.de/dataset/ac7347a6-8011-46b2-97ed-b4816807ef47/resource/a90e6d90-ae46-4b91-997c-c29c9a7b1e71/download/ladesaeulenregister.csv)
 
 
 #### Datenmodelle: Enthält die zwei Datenmodelle die mit [Neo4j Workspace](https://workspace-preview.neo4j.io/workspace/query) erstellt wurden
