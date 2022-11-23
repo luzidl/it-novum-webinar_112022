@@ -1,4 +1,4 @@
-# it-novum Webinar 24. November 2022.  (Work in progress ...)
+# it-novum Webinar 24. November 2022.
 
 ### Demo Daten und Skripte vom IT Novum Seminar - Graph-Datenbanken: So decken Sie neue Zusammenhänge auf
 
